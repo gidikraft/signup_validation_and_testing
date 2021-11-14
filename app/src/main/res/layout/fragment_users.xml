@@ -1,0 +1,100 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="fragments.UsersFragment">
+
+    <ImageView
+        android:id="@+id/solid_top_background_users"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/solid_background_dark_blue"
+        app:layout_constraintHeight_percent=".27"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <ImageView
+        android:id="@+id/logo_users"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:src="@drawable/house_logo"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintTop_toTopOf="@id/solid_top_background_users"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_layout_users"/>
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Krafty Homes"
+        style="@style/Light_CabinText"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_layout_users"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/logo_users" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_users"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        app:layout_constraintHeight_percent=".78"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/top_view_background">
+
+        <TextView
+            android:id="@+id/username_entered"
+            style="@style/Light_CabinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username: "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.143" />
+
+        <TextView
+            android:id="@+id/email_entered"
+            style="@style/Light_CabinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: "
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username_entered" />
+
+        <TextView
+            android:id="@+id/phone_number_entered"
+            style="@style/Light_CabinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone number: "
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_entered" />
+        <TextView
+            android:id="@+id/sex_picked"
+            style="@style/Light_CabinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sex: "
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_number_entered" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,6 +12,7 @@ class UsersFragment : Fragment() {
     var displayUsername: String? = ""
     var displayEmail: String? = ""
     var displayPhoneNumber: String? = ""
+    var displaySex: String? = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,13 +32,13 @@ class UsersFragment : Fragment() {
         displayUsername = arguments?.getString("username")
         displayEmail = arguments?.getString("userEmail")
         displayPhoneNumber = arguments?.getString("userPhone")
+        displaySex = arguments?.getString("userSex")
 
         view.findViewById<TextView>(R.id.username_entered).text = displayUsername
         view.findViewById<TextView>(R.id.email_entered).text = displayEmail
         view.findViewById<TextView>(R.id.phone_number_entered).text = displayPhoneNumber
+        view.findViewById<TextView>(R.id.sex_picked).text = displaySex
 
         return view
     }
-
-    companion object
 }

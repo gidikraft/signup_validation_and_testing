@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity(), Communicator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 //set the signUpFragment to display when the activity loads
         replaceFragment(signUpFragment)
 //listener that switches to signup pages when the menu is clicked
@@ -28,8 +29,8 @@ class MainActivity : AppCompatActivity(), Communicator {
         users.setOnClickListener {
             replaceFragment(usersFragment)
         }
-
     }
+
 //    function that switches between the pages when button is clicked
     private fun replaceFragment(fragment: Fragment){
         if (fragment != null){
@@ -38,12 +39,14 @@ class MainActivity : AppCompatActivity(), Communicator {
             transaction.commit()
         }
     }
+
 //override abstract method from interface to act as communicator between fragments
-    override fun passData(username: String, email: String, phone: String) {
+    override fun passData(username: String, email: String, phone: String, sex: String) {
         val bundle = Bundle()
         bundle.putString("username", username)
         bundle.putString("userEmail", email)
         bundle.putString("userPhone", phone)
+        bundle.putString("userSex", sex)
 
         val transaction = this.supportFragmentManager.beginTransaction()
         usersFragment.arguments = bundle

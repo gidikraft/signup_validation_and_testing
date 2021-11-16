@@ -104,6 +104,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:background="#DBDDDD"
+            android:prompt="@string/prompt"
+            android:spinnerMode="dialog"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/phone_number"
